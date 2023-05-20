@@ -35,9 +35,17 @@ background-color: rgba(0, 0, 255, 0.763);
     height: 100px;
     place-items: center;
 padding-left: 10px;
-opacity: 0;
+opacity: ;
 }
 .icon h2{
     text-align: center;
     color:black;
+}
+.mark{
+    text-align: center;
+    margin-top: -95px;
+    font-family: Cambria;
+    font-size: 90px;
+    color: gold;
+
 }
