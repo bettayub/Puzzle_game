@@ -34,11 +34,9 @@ background-color: rgba(0, 0, 255, 0.763);
 .card:hover{
 transform: scale(1.02);
 
-.icon.flipped{
-
 }
 
-}
+
 .icon img{
     border-radius:20px ;
     height: 100px;
