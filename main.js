@@ -14,7 +14,8 @@ counter++;
     secondSelection = icon.getAttribute("pic");
     counter = 0;
     if(firstSelection===secondSelection){
-        const co
+        const correctCards = document.querySelectorAll(
+            ".icon[pic='"+firstSelection+ "']"  );
     }
 }
 
