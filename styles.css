@@ -25,11 +25,12 @@ background-color: rgba(0, 0, 255, 0.763);
     
 }
 .icon{
-    background-color: oldlace;
+    background-color: rgb(201, 193, 178);
     height:150px ;
     width:150px ;
     border-radius: 10px;
     padding: 12px;
+
 }
 .card:hover{
 transform: scale(1.02);

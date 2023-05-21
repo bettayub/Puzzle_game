@@ -42,3 +42,15 @@ cards.forEach((icon) => {
         }
     });
 });
+(function shuffle() {
+    cards.forEach(icon => {
+      let randomPos = Math.floor(Math.random() * 12);
+      icon.style.order = randomPos;
+    });
+  })();
+  
+  
+  
+  
+  
+  
