@@ -17,8 +17,16 @@ counter++;
         const correctCards = document.querySelectorAll(
             ".icon[pic='"+firstSelection+ "']"  );
             correctCards[0].classList.add("checked");
+            correctCards[0].classList.remove("clicked");
             correctCards[1].classList.add("checked");
-    }
+            correctCards[1].classList.remove("clicked");
+         }else {
+            const incorrectcards = document.querySelectorAll(".icon.clicked");
+
+            
+         }
+           
+         
 }
 
     });
