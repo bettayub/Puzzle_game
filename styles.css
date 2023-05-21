@@ -18,17 +18,22 @@ background-color: rgba(0, 0, 255, 0.763);
     margin-top: 10px;
 }
 .cards{
-    display: grid;
+ display: grid;
    grid-template-columns: repeat(4,1fr);
     grid-gap:1.5cm;
     
+    
 }
 .icon{
-    background-color: rgba(16, 233, 34, 0.596);
+    background-color: rgba(75, 210, 86, 0.596);
     height:150px ;
     width:150px ;
     border-radius: 10px;
-    padding: 10px;
+    padding: 12px;
+}
+.card:hover{
+transform: scaleX(1.02);
+
 }
 .icon img{
     border-radius:20px ;
@@ -41,14 +46,6 @@ opacity: 0;
     text-align: center;
     color:black;
 }
-.mark{
-    text-align: center;
-    margin-top: -95px;
-    font-family: Cambria;
-    font-size: 90px;
-    color: gold;
-}
-
 .icon.clicked{
 background-color: pink;
 

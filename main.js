@@ -17,9 +17,9 @@ counter++;
     if(firstSelection===secondSelection){
         const correctCards = document.querySelectorAll(
             ".icon[pic='" + firstSelection + "']"  );
-            correctCards[0].classList.add("checked");
+            correctCards[0].classList.add("correct");
             correctCards[0].classList.remove("clicked");
-            correctCards[1].classList.add("checked");
+            correctCards[1].classList.add("correct");
             correctCards[1].classList.remove("clicked");
          }else {
             const incorrectCards = document.querySelectorAll(".icon.clicked");
@@ -34,10 +34,7 @@ counter++;
                 incorrectCards[1].classlist.remove("clicked");
 
             },800);
-         }
-           
-         
+         }    
 }
-
     });
 });
