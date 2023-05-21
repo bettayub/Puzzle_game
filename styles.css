@@ -25,14 +25,18 @@ background-color: rgba(0, 0, 255, 0.763);
     
 }
 .icon{
-    background-color: rgba(75, 210, 86, 0.596);
+    background-color: oldlace;
     height:150px ;
     width:150px ;
     border-radius: 10px;
     padding: 12px;
 }
 .card:hover{
-transform: scaleX(1.02);
+transform: scale(1.02);
+
+.icon.flipped{
+
+}
 
 }
 .icon img{
@@ -41,10 +45,6 @@ transform: scaleX(1.02);
     place-items: center;
 padding-left: 10px;
 opacity: 0;
-}
-.icon h2{
-    text-align: center;
-    color:black;
 }
 .icon.clicked{
 background-color: pink;

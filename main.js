@@ -3,38 +3,42 @@ let firstSelection = "";
 let secondSelection = "";
 
 const cards = document.querySelectorAll(".cards .icon");
-cards.forEach((icon) =>{
-    icon.addEventListener("click", () =>
-    {
-        icon.classList.add("clicked")
-        if (counter === 0){
-firstSelection = icon.getAttribute("pic");
-counter++;
-}else {
-    secondSelection = icon.getAttribute("pic");
-    counter = 0;
+cards.forEach((icon) => {
+    icon.addEventListener("click", () => {
+        icon.classList.add("clicked");
+        if (counter === 0) {
+            firstSelection = icon.getAttribute("pic");
+            counter++;
+        } else {
+            secondSelection = icon.getAttribute("pic");
+            counter = 0;
 
-    if(firstSelection===secondSelection){
-        const correctCards = document.querySelectorAll(
-            ".icon[pic='" + firstSelection + "']"  );
-            correctCards[0].classList.add("correct");
-            correctCards[0].classList.remove("clicked");
-            correctCards[1].classList.add("correct");
-            correctCards[1].classList.remove("clicked");
-         }else {
-            const incorrectCards = document.querySelectorAll(".icon.clicked");
+            if (firstSelection === secondSelection) {
+                const correctCards = document.querySelectorAll(".icon[pic='" + firstSelection + "']");
+                correctCards[0].classList.add("checked");
+                correctCards[0].classList.remove("clicked");
+                correctCards[1].classList.add("checked");
+                correctCards[1].classList.remove("clicked");
+            } else {
+                const incorrectCards = document.querySelectorAll(".icon.clicked");
 
-            incorrectCards[0].classList.add("shake");
-            incorrectCards[1].classList.add("shake");
+                incorrectCards[0].classList.add("shake");
+                incorrectCards[1].classList.add("shake");
 
-            setTimeout(() => {
-                incorrectCards[0].classlist.remove("shake");
-                incorrectCards[0].classlist.remove("clicked");
-                incorrectCards[1].classlist.remove("shake");
-                incorrectCards[1].classlist.remove("clicked");
+                setTimeout(() => {
+                    incorrectCards.forEach((card) => {
+                        card.classList.remove("shake");
+                        card.classList.remove("clicked");
+                    });
+                }, 800);
 
-            },800);
-         }    
-}
+                // Flip back cards after a delay
+                setTimeout(() => {
+                    incorrectCards.forEach((card) => {
+                        card.classList.remove("checked");
+                    });
+                }, 1500);
+            }
+        }
     });
 });
