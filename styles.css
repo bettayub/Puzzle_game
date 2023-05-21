@@ -19,8 +19,9 @@ background-color: rgba(0, 0, 255, 0.763);
 }
 .cards{
  display: grid;
-   grid-template-columns: repeat(4,1fr);
-    grid-gap:1.5cm;
+ grid-template-columns: repeat(4,1fr);
+ grid-gap:1.5cm;
+ margin-right: 10px;
     
     
 }
