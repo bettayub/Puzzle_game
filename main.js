@@ -16,6 +16,8 @@ counter++;
     if(firstSelection===secondSelection){
         const correctCards = document.querySelectorAll(
             ".icon[pic='"+firstSelection+ "']"  );
+            correctCards[0].classList.add("checked");
+            correctCards[1].classList.add("checked");
     }
 }
 

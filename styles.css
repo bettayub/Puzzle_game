@@ -47,5 +47,10 @@ opacity: 0;
     font-family: Cambria;
     font-size: 90px;
     color: gold;
-
+}
+.icon.checked{
+background-color: yellow;
+}
+.icon.clicked img{
+    opacity: 1;
 }
