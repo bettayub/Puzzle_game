@@ -32,7 +32,7 @@ cards.forEach((icon) => {
                     });
                 }, 800);
 
-                // Flip back cards after a delay
+                // 
                 setTimeout(() => {
                     incorrectCards.forEach((card) => {
                         card.classList.remove("checked");
@@ -51,6 +51,11 @@ cards.forEach((icon) => {
   
   
   
-  
+const startButton = document.getElementById('start-button');
+const timerElement = document.getElementById('timer');
+const movesElement = document.getElementById('moves');
+const starRatingElement = document.getElementById('star-rating');
+
+
   
   
