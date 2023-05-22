@@ -19,8 +19,7 @@ cards.forEach((icon) => {
                 correctCards[0].classList.remove("clicked");
                 correctCards[1].classList.add("checked");
                 correctCards[1].classList.remove("clicked");
-            }
-             else {
+            } else {
                 const incorrectCards = document.querySelectorAll(".icon.clicked");
 
                 incorrectCards[0].classList.add("shake");
@@ -49,8 +48,11 @@ cards.forEach((icon) => {
       icon.style.order = randomPos;
     });
   })();
-const timerElement = document.getElementById('timer');
 
+const startButton = document.getElementById('start-button');
+const timerElement = document.getElementById('timer');
+const movesElement = document.getElementById('moves');
+const starRatingElement = document.getElementById('star-rating');
 
 let movesCount = 0;
 let starRating = 5;
@@ -58,45 +60,29 @@ let timerInterval;
 let minutes = 0;
 let seconds = 0;
 
-const startButton = document.getElementById('start-button');
 function startGame() {
-    movesCount = 0;
+  movesCount = 0;
   starRating = 5;
   minutes = 0;
   seconds = 0;
 
-  const movesElement = document.getElementById('moves');
   movesElement.textContent = `Moves: ${movesCount}`;
-  movesCount = 0;
-// rating
-  const starRatingElement = document.getElementById('star-rating');
   starRatingElement.textContent = `Star Rating: ${starRating}`;
   updateTimer();
-  starRating = 5;
 
-//   time
   timerInterval = setInterval(updateTimer, 1000);
 
-  // Add event listeners to the cards
   const cards = document.querySelectorAll('.icon');
   cards.forEach((card) => {
     card.addEventListener('click', cardClickHandler);
   });
 
-  // Hide start button
-  startButton.style.display = 'none';
+  startButton.style.display = '';
 }
-
-// Function to handle card click
 function cardClickHandler() {
-  // Handle the logic for card click here
-  // ...
-  
-  // Increment moves count
   movesCount++;
   movesElement.textContent = `Moves: ${movesCount}`;
 
-  // Update star rating based on moves count
   if (movesCount > 10) {
     starRating = 4;
   } else if (movesCount > 15) {
@@ -109,7 +95,7 @@ function cardClickHandler() {
   starRatingElement.textContent = `Star Rating: ${starRating}`;
 }
 
-// Function to update the timer
+// time update
 function updateTimer() {
   seconds++;
   if (seconds === 60) {
@@ -119,6 +105,4 @@ function updateTimer() {
 
   timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
-
-// Event listener for the start button
 startButton.addEventListener('click', startGame);
