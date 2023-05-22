@@ -15,15 +15,13 @@
   
   #start-button {
     padding: 10px 20px;
-    
     padding: 30px;
-    color: yellow;
-
-    background-color: #4caf50;
+     background-color: #0ad311;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: x-large;
   }
   
   #timer {
