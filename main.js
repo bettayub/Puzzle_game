@@ -19,7 +19,8 @@ cards.forEach((icon) => {
                 correctCards[0].classList.remove("clicked");
                 correctCards[1].classList.add("checked");
                 correctCards[1].classList.remove("clicked");
-            } else {
+            }
+             else {
                 const incorrectCards = document.querySelectorAll(".icon.clicked");
 
                 incorrectCards[0].classList.add("shake");
@@ -49,8 +50,7 @@ cards.forEach((icon) => {
     });
   })();
 const timerElement = document.getElementById('timer');
-const movesElement = document.getElementById('moves');
-const starRatingElement = document.getElementById('star-rating');
+
 
 let movesCount = 0;
 let starRating = 5;
@@ -60,17 +60,21 @@ let seconds = 0;
 
 const startButton = document.getElementById('start-button');
 function startGame() {
-  movesCount = 0;
+    movesCount = 0;
   starRating = 5;
   minutes = 0;
   seconds = 0;
 
-  // Reset elements
+  const movesElement = document.getElementById('moves');
   movesElement.textContent = `Moves: ${movesCount}`;
+  movesCount = 0;
+// rating
+  const starRatingElement = document.getElementById('star-rating');
   starRatingElement.textContent = `Star Rating: ${starRating}`;
   updateTimer();
+  starRating = 5;
 
-  // Start the timer
+//   time
   timerInterval = setInterval(updateTimer, 1000);
 
   // Add event listeners to the cards
