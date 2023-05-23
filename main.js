@@ -19,6 +19,9 @@ cards.forEach((icon) => {
                 correctCards[0].classList.remove("clicked");
                 correctCards[1].classList.add("checked");
                 correctCards[1].classList.remove("clicked");
+
+                checkAllCardsFlipped();
+
             } else {
                 const incorrectCards = document.querySelectorAll(".icon.clicked");
 
@@ -38,6 +41,7 @@ cards.forEach((icon) => {
                         card.classList.remove("checked");
                     });
                 }, 1500);
+
             }
         }
     });
@@ -106,3 +110,13 @@ function updateTimer() {
   timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
 startButton.addEventListener('click', startGame);
+
+
+function checkAllCardsFlipped() {
+    const flippedCards = document.querySelectorAll('.icon.checked');
+    if (flippedCards.length === cards.length) {
+      clearInterval(timerInterval);
+      alert('Congratulations! You have flipped all the cards.');
+    }
+  }
+
